@@ -4,7 +4,7 @@
   "description": "Ejercicio 1",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "keywords": [
+    "server"
+  ]
 }
