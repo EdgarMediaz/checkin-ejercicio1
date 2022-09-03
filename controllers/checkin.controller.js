@@ -66,6 +66,15 @@ const checkOut = async (req, res) => {
         status: 'error',
         message: 'register not found',
       });
+    } else {
+      await register.update({
+        exitTime,
+        status: 'out',
+      });
+      res.status(200).json({
+        status: 'success',
+        data: { register },
+      });
     }
   } catch (error) {
     console.log(error);
@@ -82,6 +91,13 @@ const cancelRegister = async (req, res) => {
       return res.status(404).json({
         status: 'error',
         message: 'register not found',
+      });
+    } else {
+      await register.update({
+        status: 'cancelled',
+      });
+      res.status(204).json({
+        status: 'success',
       });
     }
   } catch (error) {
