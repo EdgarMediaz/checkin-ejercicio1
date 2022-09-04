@@ -2,7 +2,7 @@ const { db, DataTypes } = require('../utils/database.util')
 
 const Checkin = db.define('checkin', {
     id: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       allowNull: false,
